@@ -10,3 +10,17 @@ E.g.:
     primary:    boolean networks
     others:     complexity, robotics
 ```
+
+## Generate per-article bibliography
+
+This repo contains a script to generate a custom bibliography file for an article, containing only the cited references.
+Firstly, make sure to add this repository as a git submodule.
+Then, you can run the script.
+Beware, a `.aux` file needs to exist in the article directory.
+Beware also specifying the name of the file, as if a file with the same name already exists it will be deleted and overwritten.
+
+```
+git submodule add https://github.com/Mandrab/bibliography.git bib
+
+./bib/extract_references.sh generated.bib
+```
